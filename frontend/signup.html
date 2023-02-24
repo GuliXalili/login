@@ -1,0 +1,187 @@
+﻿{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- // Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Required meta tags // -->
+
+    <meta name="description" content="Login and Register Form HTML Template - developed by 'ceosdesigns' - sold exclusively on 'themeforest.net'">
+	<meta name="author" content="ceosdesigns.sk">
+
+    <title>Nimoy · Login and Register Form HTML Template</title>
+
+	<!-- // Favicon -->
+	<link href="{% static 'images/favicon.png' %}" rel="icon">
+	<!-- Favicon // -->
+
+	<!-- // Google Web Fonts -->
+	<link href="{% static '../../css?family=Open+Sans:400,600&display=swap' %}" rel="stylesheet">
+	<!-- Google Web Fonts // -->
+	
+	<!-- // Font Awesome 5 Free -->
+	<link href="{% static '../../releases/v5.15.1/css/all.css' %}" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" rel="stylesheet">
+	<!-- Font Awesome 5 Free // -->
+
+    <!-- // Template CSS files -->
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/styles.css' %}" rel="stylesheet">
+	<!-- Template CSS files  // -->
+</head>
+<body>
+	<!-- // Preloader -->
+	<div id="nm-preloader" class="nm-aic nm-vh-md-100">
+		<div class="nm-ripple">
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<!-- Preloader // -->
+
+	<main id="page-content" class="d-flex nm-aic nm-vh-md-100">
+		
+		<!-- // Form side -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 offset-md-1 col-lg-10 offset-lg-1 col-xl-6 offset-xl-3 nm-st nm-st-md">
+					<form method="POST">
+						{% csrf_token %}
+						{% load widget_tweaks %}
+						<div class="nm-mb-2 nm-mb-md-2">
+							<h2>Create your free account now!</h2>
+							<p>Already have an account? <a class="nm-fs-1 nm-fw-bd underline" href="login.html">Log In</a></p>
+						</div>
+						
+						<div class="input-group nm-gp">
+							<span class="nm-gp-pp"><i class="fas fa-user"></i></span>
+							{{form.username|add_class:"form-control"}}
+							<!-- <input type="text" class="form-control" id="inputUsername" tabindex="1" placeholder="Username" required=""> -->
+						</div>
+
+						<div class="input-group nm-gp">
+							<span class="nm-gp-pp"><i class="fas fa-envelope-open"></i></span>
+							{{form.email|add_class:"form-control"}}
+							<!-- <input type="email" class="form-control" id="inputEmail" tabindex="2" placeholder="Email" required=""> -->
+						</div>
+						
+						<div class="input-group nm-gp">
+							<span class="nm-gp-pp"><i class="fas fa-lock"></i></span>
+							{{form.password1|add_class:"form-control"}}
+							<!-- <input type="password" class="form-control" id="inputPassword" tabindex="3" placeholder="Password" required=""> -->
+						</div>
+
+						<div class="input-group nm-gp">
+							<span class="nm-gp-pp"><i class="fas fa-lock"></i></span>
+							{{form.password2|add_class:"form-control"}}
+							<!-- <input type="password" class="form-control" id="inputPassword" tabindex="3" placeholder="Password" required=""> -->
+						</div>
+
+						<div class="row nm-aic nm-mb-2">
+							<div class="col-sm-6 nm-mb-1 nm-mb-sm-0">
+								<span class="nm-fs-1 nm-tm">Show password</span>
+								<label class="nm-sw-pd">
+									<input type="checkbox" id="toggle-password" class="d-none">
+									<span class="slider round"></span>
+								</label>
+							</div>
+							
+							<div class="col-sm-6 nm-sm-tr">
+								<button type="submit" class="btn btn-primary nm-hvr nm-btn-1">Log In</button>
+							</div>
+						</div>
+
+						<div class="row nm-row-ct nm-tp-3">
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="termsAndConditions">
+								<label class="form-check-label nm-check" for="termsAndConditions">I agree to the <a class="nm-fs-1 nm-fw-bd" href="#">Terms & Conditions</a></label>
+							</div>
+						</div>
+
+						<div class="row nm-row-ct nm-tp-5">
+							<p>
+								© 2020 All Rights Reserved. <a class="heading" href="../index.html" aria-label="Nimoy">NIMOY</a> created by ceosDesigns. <a class="heading" href="#" aria-label="Terms & Conditions">Terms & Conditions</a>, <a class="heading" href="#" aria-label="Privacy">Privacy Settings</a>.
+							</p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Form Side // -->
+
+		<!-- // Non-form side -->
+		<div id="non-form-side" class="col-lg-6 col-xl-6 d-none d-lg-flex nm-aic nm-vh-100">
+			<div class="overlay"></div>
+		</div>
+		<!-- Non-form Side // -->
+	</main>
+	
+	<!-- // Vendor JS files -->
+	<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+	<!-- Vendor JS files // -->
+
+	<!-- Template JS files // -->
+	<script src="{% static 'js/script.js' %}"></script>
+	<!-- Template JS files // -->
+
+	<!-- ======================================================= -->
+	<!-- // Setting to allow preview of different color variants -->
+	<!-- ======================================================= -->
+	<div id="settings" style="position: fixed; top: 20%; right: 0%; width: 40px; height: 40px; background-color: #000; color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+		<i class="fas fa-cog"></i>
+		<div id="colors" style="position: absolute; top: 40px; left: 40px; width: 40px; height: 240px; background-color: #000;">
+			<a id="blue" href="#" style="display: block; width: 40px; height: 40px; background-color: #007bff;"></a>
+			<a id="beige" href="#" style="display: block; width: 40px; height: 40px; background-color: #eab8a9;"></a>
+			<a id="burgundy" href="#" style="display: block; width: 40px; height: 40px; background-color: #af102e;"></a>
+			<a id="fuchsia" href="#" style="display: block; width: 40px; height: 40px; background-color: #600da8;"></a>
+			<a id="turquoise" href="#" style="display: block; width: 40px; height: 40px; background-color: #50c8cc;"></a>
+			<a href="../../index.html" style="display: block; width: 40px; height: 40px; background-color: #000; color: #fff; display: flex; align-items: center; justify-content: center;"><i class="fas fa-home"></i></a>
+		</div>
+	</div>
+
+	<script>
+		let tmpLocation = window.location.href;
+		let tmpEndLocation = tmpLocation.split("/");
+		let targetLocation = tmpEndLocation[tmpEndLocation.length-1];
+		targetLocation = targetLocation.replace(".html","").replace("#", "");
+		let targetLocationArray = [];
+
+		if(targetLocation.includes("_")){
+			targetLocationArray = targetLocation.split("_");
+			targetLocationArray[1] = "_" + targetLocationArray[1];
+		}
+		else {
+			targetLocationArray[0] = targetLocation;
+			targetLocationArray[1] = "";
+		}
+
+		let l = document.links;
+		for(let i=0; i<l.length; i++) {
+			let tmp = l[i].attributes.href.nodeValue;
+			l[i].attributes.href.nodeValue = tmp.replace("recover","recover" + targetLocationArray[1]).replace("login","login" + targetLocationArray[1]).replace("signup","signup" + targetLocationArray[1]);
+		}
+
+		document.getElementById("blue").setAttribute('href',"./" + targetLocationArray[0] + ".html");
+		document.getElementById("beige").setAttribute('href',"./" + targetLocationArray[0] + "_1.html");
+		document.getElementById("burgundy").setAttribute('href',"./" + targetLocationArray[0] + "_2.html");
+		document.getElementById("fuchsia").setAttribute('href',"./" + targetLocationArray[0] + "_3.html");
+		document.getElementById("turquoise").setAttribute('href',"./" + targetLocationArray[0] + "_4.html");
+
+		document.getElementById("colors").style.transition = 'all 0.2s';
+		document.getElementById("settings").addEventListener("click", () =>{
+			let leftPosition = document.getElementById("colors").style.left;
+
+			if(leftPosition == '40px'){
+				document.getElementById("colors").style.left = '0px';
+			}
+			else {
+				document.getElementById("colors").style.left = '40px';
+			}
+		});
+	</script>
+	<!-- ======================================================= -->
+	<!-- Setting to allow preview of different color variants // -->
+	<!-- ======================================================= -->
+</body>
+</html>
